@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Politicast - British Politics</title>
+  <link href="WebpagesCSS.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+.auto-style1 {
+	border-width: 0px;
+}
+.auto-style2 {
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	text-align: center;
+}
+  .auto-style3 {
+	  text-decoration: none;
+  }
+  .auto-style4 {
+	  color: #000000;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="auto-style2">
+  <img src="images/Watermark.png" alt="Watermark" class="auto-style5" style="float: left; left: 10px; top: 9px;" height="65" width="144">
+  <img src="images/menuIcon.png" alt="Menu" class="mobile-nav-icon" onclick="toggleMenu()" />
+  <span class="page-title">British Politics</span> </header>
+
+<!-- Navigation Bar -->
+<nav class="nav-bar">
+  <div class="nav-cell"><a class="auto-style3" href="PhiloWebpage.html">
+	  <span class="auto-style4">Philosophy and Ethics</span></a></div>
+  <div class="nav-cell" style="text-align: center">
+	  <a class="auto-style3" href="technologyWebpage.html">
+	  <span class="auto-style4">Technology</span></a></div>
+  <div class="nav-cell"><a class="auto-style3" href="Sports.html">
+	  <span class="auto-style4">Sports</span></a></div>
+  <div class="nav-cell active" style="color: #000000">British Politics</div>
+  <div class="nav-cell"><a class="auto-style3" href="mideastWebpage.html">
+	  <span class="auto-style4">Middle Eastern Politics</span></a></div>
+  <div class="nav-cell"><a class="auto-style3" href="intlAffairWebpage.html">
+	  <span class="auto-style4">International Affairs</span></a></div>
+  <div class="nav-cell"><a href="index.html" class="auto-style3">
+	  <span class="auto-style4">Home</span></div>
+</nav>
+
+<a href="index.html" class="auto-style3">
+
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-dropdown">
+  <a href="PhiloWebpage.html">Philosophy and Ethics</a>
+  <a href="technologyWebpage.html">Technology</a>
+  <a href="Sports.html">Sports</a>
+  <a href="britWebpage.html">British Politics</a>
+  <a href="mideastWebpage.html">Middle Eastern Politics</a>
+  <a href="intlAffairWebpage.html">International Affairs</a>
+  <a href="index.html">Home</a>
+</div>
+
+<!-- Articles -->
+<main class="article-grid">
+  <div class="article-cell">Article 1</div>
+  <div class="article-cell">Article 2</div>
+  <div class="article-cell">Article 3</div>
+  <div class="article-cell">Article 4</div>
+  <div class="article-cell">Article 5</div>
+  <div class="article-cell">Article 6</div>
+  <div class="article-cell">Article 7</div>
+  <div class="article-cell">Article 8</div>
+</main>
+
+<!-- Footer -->
+<footer class="footer-row">
+  <div class="footer-flex">
+    <div class="footer-left">© 2025 Politicast Group</div>
+    <div class="footer-right">
+        <a href="https://www.youtube.com/@PoliticastOfficial" target="_blank">
+       <img alt="Youtube" src="images/YoutubeLogo.png" width="30" class="auto-style1" /></a></a><a href="https://www.instagram.com/politicast.podcast" target="_blank"><img alt="Instagram" src="images/InstagramLogo.png" width="30" class="auto-style1" /></a><a href="https://open.spotify.com/show/6NKNSZw06zeGvGeEDZjyWO?si=714b8ff7bf244a69" target="_blank"><img alt="Spotify" src="images/spotifyLogo.png" width="30" class="auto-style1" /></a>
+    	<a href="mailto:thepoliticastpodcast@gmail.com" target="_blank">Contact 
+		Us</a></div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("mobile-dropdown").classList.toggle("open");
+  }
+
+  document.addEventListener("click", function (e) {
+    const dropdown = document.getElementById("mobile-dropdown");
+    const icon = document.querySelector(".mobile-nav-icon");
+
+    const clickedInsideMenu = dropdown.contains(e.target);
+    const clickedIcon = icon.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedIcon) {
+      dropdown.classList.remove("open");
+    }
+  });
+</script>
+</body>
+</html>

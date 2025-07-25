@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta content="en-us" http-equiv="Content-Language" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <title>Politicast - Home</title>
+  <link href="homeCSS.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+.auto-style1 {
+	border-width: 0px;
+}
+  .auto-style2 {
+	  margin-top: 0px;
+  }
+  .auto-style3 {
+	margin-right: 0px;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Header + Navigation -->
+  <table style="width: 100%;">
+    <tr>
+      <td colspan="6" style="text-align: center; height: 11px;">
+        <img alt="Watermark" width="142" src="images/Watermark.png" loading="lazy" height="64" class="auto-style3" />
+        <img id="menu-icon" class="mobile-nav-icon" src="images/menuIcon.png" loading="lazy" alt="Menu" width="40" style="float: right" />
+      </td>
+    </tr>
+
+    <!-- Desktop Navigation -->
+    <tr class="desktop-nav">
+      <td class="nav-cell" style="width: 10%"><a href="PhiloWebpage.html"><strong>Philosophy and Ethics</strong></td>
+      <td class="nav-cell" style="width: 10%"><a href="technologyWebpage.html">
+	  <strong>Technology</strong></a></td>
+      <td class="nav-cell" style="width: 10%"><strong><a href="Sports.html">Sports</a></strong></td>
+      <td class="nav-cell" style="width: 10%"><strong>
+	  <a href="britWebpage.html">British Politics</a></strong></td>
+      <td class="nav-cell" style="width: 10%"><strong>
+	  <a href="mideastWebpage.html">Middle Eastern Politics</a></strong></td>
+      <td class="nav-cell" style="width: 10%"><strong>
+	  <a href="intlAffairWebpage.html">International Affairs</a></strong></td>
+    </tr>
+  </table>
+
+  <!-- Mobile Navigation Sidebar -->
+  <div id="mobile-dropdown" class="side-menu">
+    <a href="PhiloWebpage.html">Philosophy and Ethics</a>
+    <a href="technologyWebpage.html">Technology</a>
+    <a href="Sports.html">Sports</a>
+    <a href="britWebpage.html">British Politics</a>
+    <a href="mideastWebpage.html">Middle Eastern Politics</a>
+    <a href="intlAffairWebpage.html">International Affairs</a>
+  </div>
+
+  <!-- Articles Section -->
+  <div class="article-container">
+    <div class="article-cell">Article every image should be 800 px wide by 250 
+		px high</div>
+    <div class="article-cell">
+		<img alt="Example Article" loading="lazy" height="250" src="images/ArticleExample5.png" width="800" /></div>
+    <div class="article-cell">
+		<img alt="Example Article" loading="lazy" height="250" src="images/ArticleExample5.png" width="800" /></div>
+    <div class="article-cell">
+		<img alt="Example Article" loading="lazy" height="250" src="images/ArticleExample5.png" width="800" /></div>
+    <div class="article-cell">
+		<img alt="Example Article" loading="lazy" height="250" src="images/ArticleExample5.png" width="800" /></div>
+    <div class="article-cell">
+		<img alt="" height="250" src="images/ArticleExample5.png" width="800" /></div>
+    <div class="article-cell">
+		<img alt="Example Article" loading="lazy" height="250" src="images/ArticleExample5.png" width="800" /></div>
+    <div class="article-cell">
+		<img alt="Example Article" loading="lazy" height="250" src="images/ArticleExample5.png" width="800" /></div>
+
+  </div>
+
+  <!-- Footer Section -->
+  <table style="width: 100%; height: 75px;" class="auto-style2">
+  <tr class="footer-row">
+    <td>
+      <div class="footer-flex">
+        <div class="footer-left">
+          © 2025 Politicast Group, Reporting news, affairs and producing articles accurately, timely and unbias.
+        </div>
+        <div class="footer-right">
+            <a href="https://www.youtube.com/@PoliticastOfficial" target="_blank">
+            <img alt="Youtube" src="images/YoutubeLogo.png" width="30" class="auto-style1" loading="lazy" /></a><a href="https://www.instagram.com/politicast.podcast" target="_blank"><img alt="Instagram" src="images/InstagramLogo.png" loading="lazy" width="30" class="auto-style1" /></a><a href="https://open.spotify.com/show/6NKNSZw06zeGvGeEDZjyWO?si=714b8ff7bf244a69" target="_blank"><img alt="Spotify" src="images/spotifyLogo.png" loading="lazy" width="30" class="auto-style1" /></a><a href="mailto:thepoliticastpodcast@gmail.com" class="contact-link">Contact Us</a>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+  <!-- Mobile Menu Script -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.getElementById('menu-icon');
+      const sideMenu = document.getElementById('mobile-dropdown');
+
+      menuIcon.addEventListener('click', function () {
+        sideMenu.classList.toggle('open');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!sideMenu.contains(e.target) && !menuIcon.contains(e.target)) {
+          sideMenu.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
